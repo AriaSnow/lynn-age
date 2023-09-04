@@ -11,21 +11,23 @@
     img{
         max-width: 100%; /* 图片宽度最大为父容器的宽度 */
         height: auto; 
+        
     }
 }
-
+// align-items: flex-end;
 nav{
     border-bottom: 1px solid gray;
     display: flex;
-    align-items: center; /* 垂直居中导航和图像 */
+    align-items: flex-end;
     justify-content: space-evenly; 
 }
 .nav-item{
     margin-left: auto;
     margin-right: 5px;
     display: flex;
-    justify-content: center; /* 水平置中 */
-    align-items: flex-end;
+    // justify-content: center; /* 水平置中 */
+    // align-items: flex-end;
+    margin-top: auto;
     a{
         padding: 0rem 0.3rem;
         padding-bottom: 0;
@@ -34,6 +36,7 @@ nav{
         color: black;
         margin-left: auto;
         margin-right: 2px;
+        
         &:hover{
             color: #a18f68;
         }
@@ -43,79 +46,82 @@ nav{
 .justify-content-end{
     margin-left: auto;
 }
-
 footer{
+    color: #ffffff;
     background-color: black;
-    .footer_logo{
-        display: flex;
-        margin-bottom: 25px;
-        .footer_logo_right{
-            display: flex;
-            margin-left: auto;
-            margin-top: auto;
-            margin-right: 20px;
-            a{
-                margin-right: 20px;
+    font-size: 0.9em;
+    li{
+        a{
+            color: #ffffff;
+            &:hover{
+                color: #ffffff;
+                border-bottom: 1px solid #ffffff;
             }
         }
+        
+    }
+    .container {
+        letter-spacing: 0.5px;
+        
+        
+        li {
+            list-style: none;
+            /* 移除列表符號或數字 */
+        }
+    }
+    p{
+        margin-bottom: 0;
+
+    }
+    .footer_title{
+        border-bottom: 1px solid #424242;;
+    }
+    .small{
+        color: #8b8b8b;
+        font-size: 0.6rem;
+    }
+    .copyright{
+        font-size: 0.4rem;
+    }
+    .footer_phone{
+        display: none;
     }
 }
-.footer_under{
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-around;
-    display: grid;
-    grid-template-columns: repeat(6, 2fr); /* 划分五等分 */
-    grid-gap: 2px;
-    text-align: center; 
-    margin: 15px;
-    font-size: 12px;
-    color: white;
-    p{
-        border-bottom: 1px solid #6a6a6a;
-        margin-bottom: 5px;
-    }
-    a{
-        color: white;
-        margin-bottom: 3px;
-        &:hover{
-            border-bottom: 1px solid white;
-        }
-    }
 
-    .footer_1 {
-            div {
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 0;
-            }
-            text-align: start; 
-            margin-bottom: 0;
+.nav-item.dropdown {
+  .nav-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .dropdown-item {
+      // 自訂 dropdown-item 的樣式
+      margin-right: 10px; // 調整項目之間的間距
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+
+
+    .footer_phone {
             display: flex;
-            flex-direction: column;
-    
-            // justify-content:center;
-            p {
-                margin-bottom: 0;
-                border-bottom:none
-            }
-            .small{
-                font-size: 8px;
-                color: gray;
-                margin-bottom:0.5rem ;
-            }
-            .copyright{
-                font-size: 10px;
-
-            }
         }
-        .footer_under_right{
-            .footer_under_right_title{
-                border-bottom: 1px solid gray;
-            }
-            p{
-                border-bottom: none;
-                margin-bottom: 3px;
-            }
+    .container{
+        .col-lg{
+            display: none;
         }
     }
+
+
+}

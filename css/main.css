@@ -27,7 +27,7 @@ a {
 nav {
   border-bottom: 1px solid gray;
   display: flex;
-  align-items: center; /* 垂直居中导航和图像 */
+  align-items: flex-end;
   justify-content: space-evenly;
 }
 
@@ -35,8 +35,7 @@ nav {
   margin-left: auto;
   margin-right: 5px;
   display: flex;
-  justify-content: center; /* 水平置中 */
-  align-items: flex-end;
+  margin-top: auto;
 }
 .nav-item a {
   padding: 0rem 0.3rem;
@@ -56,69 +55,47 @@ nav {
 }
 
 footer {
+  color: #ffffff;
   background-color: black;
+  font-size: 0.9em;
 }
-footer .footer_logo {
-  display: flex;
-  margin-bottom: 25px;
+footer li a {
+  color: #ffffff;
 }
-footer .footer_logo .footer_logo_right {
-  display: flex;
-  margin-left: auto;
-  margin-top: auto;
-  margin-right: 20px;
+footer li a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
-footer .footer_logo .footer_logo_right a {
-  margin-right: 20px;
+footer .container {
+  letter-spacing: 0.5px;
+}
+footer .container li {
+  list-style: none;
+  /* 移除列表符號或數字 */
+}
+footer p {
+  margin-bottom: 0;
+}
+footer .footer_title {
+  border-bottom: 1px solid #424242;
+}
+footer .small {
+  color: #8b8b8b;
+  font-size: 0.6rem;
+}
+footer .copyright {
+  font-size: 0.4rem;
+}
+footer .footer_phone {
+  display: none;
 }
 
-.footer_under {
-  display: grid;
-  grid-template-columns: repeat(6, 2fr); /* 划分五等分 */
-  grid-gap: 2px;
-  text-align: center;
-  margin: 15px;
-  font-size: 12px;
-  color: white;
-}
-.footer_under p {
-  border-bottom: 1px solid #6a6a6a;
-  margin-bottom: 5px;
-}
-.footer_under a {
-  color: white;
-  margin-bottom: 3px;
-}
-.footer_under a:hover {
-  border-bottom: 1px solid white;
-}
-.footer_under .footer_1 {
-  text-align: start;
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: column;
-}
-.footer_under .footer_1 div {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0;
-}
-.footer_under .footer_1 p {
-  margin-bottom: 0;
-  border-bottom: none;
-}
-.footer_under .footer_1 .small {
-  font-size: 8px;
-  color: gray;
-  margin-bottom: 0.5rem;
-}
-.footer_under .footer_1 .copyright {
-  font-size: 10px;
-}
-.footer_under .footer_under_right .footer_under_right_title {
-  border-bottom: 1px solid gray;
-}
-.footer_under .footer_under_right p {
-  border-bottom: none;
-  margin-bottom: 3px;
+@media screen and (max-width: 768px) {
+  .footer_phone {
+    display: flex;
+  }
+  .container .col-lg {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
+
